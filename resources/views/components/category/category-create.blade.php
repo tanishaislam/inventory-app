@@ -18,7 +18,7 @@
                 </div>
                 <div class="modal-footer">
                     <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                    <button onclick="Save()" id="save-btn" class="btn bg-gradient-success" >Save</button>
+                    <button onclick="Save()" id="save-btn" class="btn bg-gradient-success" >save</button>
                 </div>
             </div>
     </div>
