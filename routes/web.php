@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TokenVerificationMiddleware;
@@ -46,6 +47,8 @@ Route::get('/userProfile',[UserController::class, 'ProfilePage'])->middleware([T
 Route::get('/categoryPage',[CategoryController::class, 'CategoryPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/customerPage',[CustomerController::class, 'CustomerPage'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/productPage',[ProductController::class, 'ProductPage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/invoicePage',[InvoiceController::class, 'InvoicePage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/salePage',[InvoiceController::class, 'SalePage'])->middleware([TokenVerificationMiddleware::class]);
 
 
 //category api 
@@ -74,3 +77,12 @@ Route::get('/list-product',[ProductController::class, 'ProductList'])->middlewar
 Route::post('/delete-product',[ProductController::class, 'DeleteProduct'])->middleware([TokenVerificationMiddleware::class]);
 Route::post('/update-product',[ProductController::class, 'UpdateProduct'])->middleware([TokenVerificationMiddleware::class]);
 Route::post('/product-by-id',[ProductController::class, 'ProductById'])->middleware([TokenVerificationMiddleware::class]);
+
+
+
+//invoice api
+Route::post('/invoice-create',[InvoiceController::class, 'InvoiceCreate'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/invoice-select',[InvoiceController::class, 'InvoiceSelect'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/invoice-details',[InvoiceController::class, 'InvoiceDetails'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/invoice-delete',[InvoiceController::class, 'InvoiceDelete'])->middleware([TokenVerificationMiddleware::class]);
+
