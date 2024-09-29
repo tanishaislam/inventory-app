@@ -28,7 +28,7 @@
             errorToast("Date Range Required !")
         }else{
             window.open('/sales-report/'+FormDate+'/'+ToDate);
-        }
+        } 
     }
 
 </script>
