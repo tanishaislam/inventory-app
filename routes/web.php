@@ -86,3 +86,8 @@ Route::get('/invoice-select',[InvoiceController::class, 'InvoiceSelect'])->middl
 Route::post('/invoice-details',[InvoiceController::class, 'InvoiceDetails'])->middleware([TokenVerificationMiddleware::class]);
 Route::post('/invoice-delete',[InvoiceController::class, 'InvoiceDelete'])->middleware([TokenVerificationMiddleware::class]);
 
+
+
+
+// SUMMARY & Report
+Route::get("/summary",[DashboardController::class,'Summary'])->middleware([TokenVerificationMiddleware::class]);
