@@ -71,7 +71,7 @@ async function getList() {
     $('.viewBtn').on('click', async function () {
         let id= $(this).data('id');
         let cus= $(this).data('cus');
-        await InvoiceDetails(cus,id)
+        await InvoiceDetails(cus,id);
     })
 
     $('.deleteBtn').on('click',function () {

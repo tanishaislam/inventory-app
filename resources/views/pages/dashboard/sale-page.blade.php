@@ -129,7 +129,6 @@
 
     <script>
 
-
         (async ()=>{
           showLoader();
           await  CustomerList();
@@ -137,9 +136,7 @@
           hideLoader();
         })()
 
-
         let InvoiceItemList=[];
-
 
         function ShowInvoiceItem() {
 
@@ -233,9 +230,6 @@
            }
         }
 
-
-
-
         function addModal(id,name,price) {
             document.getElementById('PId').value=id
             document.getElementById('PName').value=name
@@ -243,8 +237,7 @@
             $('#create-modal').modal('show')
         }
 
-
-        async function CustomerList(){
+    async function CustomerList(){
             let res=await axios.get("/list-customer");
             let customerList=$("#customerList");
             let customerTable=$("#customerTable");
@@ -280,8 +273,7 @@
             });
         }
 
-
-        async function ProductList(){
+    async function ProductList(){
             let res=await axios.get("/list-product");
             let productList=$("#productList");
             let productTable=$("#productTable");
@@ -312,7 +304,6 @@
                 lengthChange: false
             });
         }
-
 
 
       async  function createInvoice() {
@@ -355,7 +346,7 @@
 
         }
 
-    </script>
+   </script>
 
 
 
